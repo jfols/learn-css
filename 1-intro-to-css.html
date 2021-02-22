@@ -1,0 +1,152 @@
+<!--
+  Learn CSS: A set of HTML files to learn CSS. Copyright (C) 2021  Justin Foley
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <style>
+      /* CSS goes here */
+    </style>
+  </head>
+  <body>
+    <h1>Learn CSS</h1>
+    <h2>What is CSS?</h2>
+    <p>
+      Cascading Style Sheets (CSS) is a <i>stylesheet language</i> that
+      describes the presentation of various markup languages like HTML and SVG.
+    </p>
+    <p>CSS is a <i>rules-based</i> language. Rules look like this:</p>
+    <pre>
+      selector {
+        property1: value1;
+        property2: value2;
+      }
+    </pre>
+    <p>
+      <i>Selectors</i> tell the browser <b>which</b> nodes to apply
+      <i>styles</i> to in the <i>DOM</i>.
+    </p>
+    <p><i>Properties</i> specify <b>how</b> to style on the <i>node</i>.</p>
+    <p>
+      <i>Values</i> can be strings, colors, px, rem, numbers, %, or other types
+      depending on the property type. It's important understand how CSS works to
+      apply styles to the DOM.
+    </p>
+    <p>
+      It's not very important to memorize lots of the selectors and style
+      properties. You'll naturally build up a knowledge of your most commonly
+      used selectors and style properties over time with practice.
+    </p>
+
+    <h2>Try It!</h2>
+    <p>Edit this page to include the following CSS inside the "style" block:</p>
+    <pre>
+      body {
+        margin: 0 auto;
+        width: 95%;
+        max-width: 440px;
+        background-color: mintcream;
+      }
+    </pre>
+
+    <p>
+      The page should now be looking a bit more centered. We've added a
+      centering technique using the "margin" property (more on how that works
+      later), a "width" value of "95%" (95% of the width of "body"s parent
+      node), a "max-width" of "440px" (440 pixels), and a "background-color" of
+      "mintcream" (...delicious!).
+    </p>
+
+    <h2>Visual Heirarchy</h2>
+    <p>
+      Let's tune up the font to make the visual heirarchy more clear. "Visual
+      heirarchy" is the design principle of arranging elements illuminates the
+      order of importance of the elements. On this page, the header elements
+      "h1" and "h2" are the most important in the visual heirachy. You can
+      increase/decrease and elements position in the visual heirarchy by
+      modifying its size, spacing, color, background, or otherwise make the
+      elment more or less visually interesting.
+    </p>
+    <div class="sidenote">
+      Squint test: squint your eyes to illuminate the visual heirarchy of the
+      page. Even though the content becomes a bit blurry it should remain clear
+      what the major parts of the page are.
+    </div>
+    <p>Let's make the "h1" font "sans-serif" instead of the default "serif".</p>
+    <p>Add this css rule to the "style" block:</p>
+    <pre>
+      h1 {
+        font-family: sans-serif;
+      }
+    </pre>
+    <p>Do the "h2" elements too.</p>
+    <pre>
+      h2 {
+        font-family: sans-serif;
+      }
+    </pre>
+    <p>
+      Looks a like we're repeating ourselves a bit...we can condense two rules
+      into one by using a <i>selector list</i>
+    </p>
+    <p>Replace the two rules for h1 and h2 with this single rule:</p>
+    <pre>
+      h1, h2 {
+        font-family: sans-serif;
+      }
+    </pre>
+    <p>Now let's make the CSS examples pop out a bit:</p>
+    <p></p>
+    <pre>
+     pre {
+      padding: 16px;
+      border-radius: 0.5rem;
+      border: dashed 2px lightblue;
+      font-family: monospace;
+    }
+    </pre>
+    <p>The complete style block should look like this now:</p>
+    <pre>
+        /* CSS goes here */
+        body {
+          margin: 0 auto;
+          width: 95%;
+          max-width: 440px;
+          background-color: mintcream;
+        }
+        h1,
+        h2 {
+          font-family: sans-serif;
+        }
+        pre {
+          padding: 16px;
+          border-radius: 0.5rem;
+          border: dashed 2px lightblue;
+          font-family: monospace;
+        }
+    </pre>
+    <p>
+      Homework time... See if you can edit the styles yourself. Maybe
+      `mintcream` isn't your favorite color?
+    </p>
+    <p>
+      Next up, let's learn more about <i>selectors</i>.
+      <button>Next Chapter</button>
+    </p>
+  </body>
+</html>
