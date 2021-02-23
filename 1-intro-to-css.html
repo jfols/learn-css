@@ -16,11 +16,10 @@
     </p>
     <p>CSS is a <i>rules-based</i> language. Rules look like this:</p>
     <pre>
-      selector {
-        property1: value1;
-        property2: value2;
-      }
-    </pre>
+selector {
+  property1: value1;
+  property2: value2;
+}</pre>
     <p>
       <i>Selectors</i> tell the browser <b>which</b> nodes to apply
       <i>styles</i> to in the <i>DOM</i>.
@@ -43,13 +42,12 @@
       (look for <b>"CSS GOES HERE"</b>):
     </p>
     <pre>
-      body {
-        margin: 0 auto;
-        width: 95%;
-        max-width: 440px;
-        background-color: mintcream;
-      }
-    </pre>
+body {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 440px;
+  background-color: mintcream;
+}</pre>
 
     <p>
       The page should now be looking a bit more centered. We've added a
@@ -81,16 +79,14 @@
     </p>
     <p>Add this css rule to the <i>style</i> block:</p>
     <pre>
-      h1 {
-        font-family: sans-serif;
-      }
-    </pre>
+h1 {
+  font-family: sans-serif;
+}</pre>
     <p>Do the <i>h2</i> elements too.</p>
     <pre>
-      h2 {
-        font-family: sans-serif;
-      }
-    </pre>
+h2 {
+  font-family: sans-serif;
+}</pre>
     <p>
       Looks like we're repeating ourselves a bit...we can condense two rules
       into one by using a <i>selector list</i>
@@ -99,40 +95,53 @@
       Replace the two rules for <i>h1</i> and <i>h2</i> with this single rule:
     </p>
     <pre>
-      h1, h2 {
-        font-family: sans-serif;
-      }
-    </pre>
-    <p>Now let's make the CSS pop out a bit:</p>
+h1, h2 {
+  font-family: sans-serif;
+}</pre>
+    <p>Now let's pull the CSS code up a little bit in the visual heirarchy by adding a dashed boarder and changing the font to <i>monospace</i>.</p>
     <p></p>
     <pre>
-     pre {
-      padding: 16px;
-      border-radius: 0.5rem;
-      border: dashed 2px lightblue;
-      font-family: monospace;
-    }
-    </pre>
+pre {
+  padding: 16px;
+  border-radius: 0.5rem;
+  border: dashed 2px lightblue;
+  font-family: monospace;
+}</pre>
+    <p>Great! Now let's add one more rule, this time using a CSS <i>class</i>. The <i>class selector</i> matches elements that contain the class name in the <i>class</i> attribute of the element.</i></p>
+    <pre>
+.sidenote {
+padding: 16px;
+border: solid 2px gray;
+border-radius: 0.5rem;
+background-color: gainsboro;
+}</pre>
     <p>The complete style block should look like this now:</p>
     <pre>
-        /* CSS goes here */
-        body {
-          margin: 0 auto;
-          width: 95%;
-          max-width: 440px;
-          background-color: mintcream;
-        }
-        h1,
-        h2 {
-          font-family: sans-serif;
-        }
-        pre {
-          padding: 16px;
-          border-radius: 0.5rem;
-          border: dashed 2px lightblue;
-          font-family: monospace;
-        }
-    </pre>
+&LT;style&GT;
+  /* CSS GOES HERE */
+  body {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 440px;
+    background-color: mintcream;
+  }
+  h1,
+  h2 {
+    font-family: sans-serif;
+  }
+  pre {
+    padding: 16px;
+    border-radius: 0.5rem;
+    border: dashed 2px lightblue;
+    font-family: monospace;
+  }
+  .sidenote {
+    padding: 16px;
+    border: solid 2px gray;
+    border-radius: 0.5rem;
+    background-color: gainsboro;
+  }
+&LT;/style&GT;</pre>
     <p>
       Homework time... See if you can edit the styles yourself. Maybe
       `mintcream` isn't your favorite color?
