@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <style>
+      /* universal selector */
+      /*       
+        * {
+          border: solid 1px black;
+        }
+      */
+
+      /* type selector */
+      body {
+        font-family: sans-serif;
+      }
+
+      /* class selector */
+      .h-10 {
+        height: 10rem;
+      }
+      .bg-coral {
+        background-color: lightcoral;
+      }
+
+      /* ID selector */
+      #divToSelectWithIDSelector {
+        background-color: lightgreen;
+      }
+
+      /* attribute selector */
+      [href] {
+        color: green;
+      }
+
+      /* attribute value selector */
+      [href="google.com"] {
+        color: purple;
+      }
+
+      /* attribute exists in list value selector */
+      [class~="exists"] {
+        background-color: red;
+      }
+
+      /* attribute exists in list value with optional hyphen selector */
+      [class|="exists"] {
+        background-color: cadetblue;
+      }
+
+      /* attribute value prefix selector */
+      [class^="prefix"] {
+        background-color: chartreuse;
+      }
+
+      /* attribute value suffix selector */
+      [class$="suffix"] {
+        background-color: cornflowerblue;
+      }
+
+      /* attribute value contains selector */
+      [class*="contains-this-class"] {
+        background-color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Learn CSS</h1>
+    <h2>Selectors</h2>
+
+    <div class="h-10 bg-coral">
+      class selectors: <i>h-10</i>, <i>bg-coral</i>
+      <div class=""></div>
+    </div>
+
+    <div id="divToSelectWithIDSelector">ID selector</div>
+
+    <a href="/selectors.html">href attribute selector</a>
+
+    <a href="google.com">attribute value selector [href="google.com"]</a>
+
+    <div class="exists h-10">
+      attribute exists in list selector [attr~=value]
+    </div>
+
+    <div class="h-10 exists-with-hyphen">
+      attribute value with optional hypen selector [class|="exists"]
+    </div>
+
+    <!-- try moving "h-10" -->
+    <div class="prefix-class-name h-10">
+      attribute value prefix selector [class^="prefix"]
+    </div>
+
+    <!-- try moving "h-10" -->
+    <div class="h-10 class-name-suffix">
+      attribute value prefix selector [class$="suffix"]
+    </div>
+
+    <div class="h-10 contains-this-class">
+      attribute value prefix selector [class*="contains-this-class"]
+    </div>
+  </body>
+</html>
